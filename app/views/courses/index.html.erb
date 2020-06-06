@@ -1,0 +1,20 @@
+<h1>Searching for - <%= @search_term %></h1>
+
+<table border ='1'>
+	<tr>
+		<th>Image</th>
+		<th>Name</th>
+		<th>Description</th>
+	</tr>
+	<% @crs.each do |course| %>
+	<tr>
+		<td style><%= image_tag(course["photoUrl"],height: 200, width: 200) %></td>
+		<td>
+			Name:
+			<div><%= course["name"] %></div>
+			Slug:
+			<div><%= course["slug"] %></div>
+		</td>
+		<td><%= course["description"] %></td>
+	</tr>
+	<% end %>

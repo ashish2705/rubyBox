@@ -1,0 +1,102 @@
+		*{
+			box-sizing:border-box;
+		}
+		body{
+			overflow:auto;
+			background: url("bg.jpg");
+			margin:40px;
+			position: relative;
+		}
+		h1{
+			text-align:center;
+			font-family:candara;
+			color:blue;
+		}
+		section{
+			clear:left;
+		}
+		article span{
+			font-family:Verdana;
+			font-size: 200%;
+			color:magenta;
+		}
+
+			a{
+				color:#fc3103;
+				font-size: 22px;
+				display: block;
+ 	 background-color: inherit;
+  	padding:22px 16px;
+	border:none;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.3s;
+  width:300px;
+			}
+			a:link,a:active{
+				text-decoration: none;
+			}
+		a:hover{
+			background-color:#fcba03;
+		}
+
+
+	@-webkit-keyframes fadeEffect {
+  		from {opacity: 0;}
+  		to {opacity: 1;}
+	}
+
+	@keyframes fadeEffect {
+  		from {opacity: 0;}
+  		to {opacity: 1;}
+	}		
+
+
+		footer{
+			position: relative;
+			top:20px;
+			clear:both;
+		}
+		#covid-19 > h2{
+			font-family:garamond;
+			color:#6b1e8a;
+
+		}
+		#elep-kill >h2{
+			font-family:garamond;
+			color:maroon;
+		}
+		article{
+			position: relative;
+		}
+		#cor,#vid{
+			width:450px;
+			height:300px;
+		}
+		@media(min-width:1200px){
+			#covid-19{
+				width:60%;
+				position: relative;
+			}
+			#elep-kill{
+				width:60%;
+				float:right;
+			}
+			#vid{
+				position: absolute;
+				top:0px;
+				right:110%;
+			}
+			#cor{
+				position: absolute;
+				top:0px;
+				left:110%;
+			}
+		}
+
+		@media(max-width:550px){
+			#cor,#vid{
+				width:90%;
+			}
+		}
