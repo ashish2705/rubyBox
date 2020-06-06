@@ -7,7 +7,7 @@
 		<th>Description</th>
 	</tr>
 	<% @crs.each do |course| %>
-	<tr>
+	<tr class=<%= cycle('even','odd') %>>
 		<td style><%= image_tag(course["photoUrl"],height: 200, width: 200) %></td>
 		<td>
 			Name:
