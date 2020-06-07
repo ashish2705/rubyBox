@@ -1,6 +1,9 @@
 
 
-
+<head>
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,600&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital@1&display=swap" rel="stylesheet"> 
+</head>
 
 
 <script>
@@ -21,15 +24,16 @@
 <p>No courses found</p>
 
 <% else %>
-<h1>Searching for - <%= @search_term %></h1>
+<h1>Results for - <%= @search_term %></h1>
 	
 	<form>
-		<input type="text" id="str" onkeyup="checkForEnterKey(this.value)">
-		<button type="button" id="myBtn" onclick="jump(str.value)">Search</button>
+		<input type="text" id="str" onkeyup="checkForEnterKey(this.value)" placeholder="Search..">
+		<button type="button" id="myBtn" onclick="jump(str.value)"><span>Search</span></button>
 
 	</form>
 
 <table border ='1'>
+	<br>
 	<tr>
 		<th>Image</th>
 		<th>Name</th>
@@ -41,6 +45,7 @@
 		<td>
 			Name:
 			<div><%= course["name"] %></div>
+			<br>
 			Slug:
 			<div><%= course["slug"] %></div>
 		</td>
