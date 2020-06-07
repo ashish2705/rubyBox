@@ -8,6 +8,12 @@
 		window.location.href = "https://search-coursera-by-ashish.herokuapp.com?looking_for=".concat(str);
 
 	}
+	function checkForEnterKey(){
+        if (event.keyCode === 13) {
+            event.preventDefault();
+            document.getElementById("myBtn").click();
+        }
+    }
 	</script>
 
 
@@ -18,8 +24,8 @@
 <h1>Searching for - <%= @search_term %></h1>
 	
 	<form>
-		<input type="text" id="str">
-		<button type="button" onclick="jump(str.value)">Search</button>
+		<input type="text" id="str" onkeyup="checkForEnterKey(this.value)">
+		<button type="button" id="myBtn" onclick="jump(str.value)">Search</button>
 
 	</form>
 
