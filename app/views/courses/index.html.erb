@@ -1,4 +1,27 @@
+
+
+
+
+
+<script>
+	function jump(str){
+		window.location.href = "https://search-coursera-by-ashish.herokuapp.com?looking_for=".concat(str);
+
+	}
+	</script>
+
+
+<% if @crs.nil? %>
+<p>No courses found</p>
+
+<% else %>
 <h1>Searching for - <%= @search_term %></h1>
+	
+	<form>
+		<input type="text" id="str">
+		<button type="button" onclick="jump(str.value)">Search</button>
+
+	</form>
 
 <table border ='1'>
 	<tr>
@@ -18,3 +41,5 @@
 		<td><%= course["description"] %></td>
 	</tr>
 	<% end %>
+</table>
+<% end %>
